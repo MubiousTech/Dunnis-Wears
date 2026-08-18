@@ -6,9 +6,8 @@ const toggleBtn = document.querySelector(".toggle_btn");
 const toggleBtnIcon = document.querySelector(".toggle_btn i");
 const dropDownMenu = document.querySelector(".dropdown_menu");
 
-if (toggleBtn) {
+if (toggleBtn && toggleBtnIcon && dropDownMenu) {
   toggleBtn.addEventListener("click", () => {
-
     dropDownMenu.classList.toggle("open");
 
     const isOpen = dropDownMenu.classList.contains("open");
@@ -17,6 +16,11 @@ if (toggleBtn) {
       ? "fa-solid fa-xmark"
       : "fa-solid fa-bars";
 
+    toggleBtn.setAttribute("aria-expanded", isOpen);
+    toggleBtn.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
   });
 }
 
@@ -28,15 +32,14 @@ if (toggleBtn) {
 const mobileLinks = document.querySelectorAll(".dropdown_menu a");
 
 mobileLinks.forEach((link) => {
-
   link.addEventListener("click", () => {
-
     dropDownMenu.classList.remove("open");
 
     toggleBtnIcon.className = "fa-solid fa-bars";
 
+    toggleBtn.setAttribute("aria-expanded", "false");
+    toggleBtn.setAttribute("aria-label", "Open navigation menu");
   });
-
 });
 
 

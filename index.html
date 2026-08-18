@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover elegant and beautifully crafted fashion designs by Dunnis Signature."
+    />
 
     <link rel="stylesheet" href="./CSS/styles.css" />
+
+    <link rel="icon" type="image/png" href="/Images/monogram.png" />
 
     <!-- Google Fonts -->
     <link
@@ -28,10 +34,14 @@
     <section id="hero" class="hero-section">
       <header>
         <nav class="navbar">
+          <!-- Logo -->
           <div class="logo">
-            <a href="#hero">Dunnis Signature</a>
+            <a href="#hero" aria-label="Dunnis Signature Home">
+              <img src="/Images/dunnis-logo.png" alt="Dunnis Signature logo" />
+            </a>
           </div>
 
+          <!-- Desktop Navigation -->
           <ul class="links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#collections">Shop</a></li>
@@ -40,13 +50,20 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
 
-          <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-          </div>
+          <!-- Mobile Menu Button -->
+          <button
+            class="toggle_btn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
         </nav>
 
-        <!-- Mobile Menu -->
-        <ul class="dropdown_menu">
+        <!-- Mobile Navigation -->
+        <ul class="dropdown_menu" id="mobile-menu">
           <li><a href="#hero">Home</a></li>
           <li><a href="#collections">Shop</a></li>
           <li><a href="#about">About</a></li>
@@ -476,10 +493,6 @@
             <img src="/Images/traditional wear.jpg" alt="Traditional wear" />
           </div>
         </div>
-
-        <div class="gallery-action">
-          <a href="#" class="view-all-btn"> VIEW ALL DESIGNS </a>
-        </div>
       </div>
     </section>
 
@@ -581,7 +594,7 @@
           perfect outfit, we'd love to hear from you.
         </p>
 
-        <a href="https://wa.me/" class="contact-btn">
+        <a href="https://wa.me/08162762299" class="contact-btn">
           <i class="fa-brands fa-whatsapp"></i>
           CONTACT US ON WHATSAPP
         </a>
@@ -613,19 +626,25 @@
           <h3>Follow Us</h3>
 
           <a
-            href="https://www.instagram.com/dunnis___signatures?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            href="https://www.instagram.com/dunnis___signatures?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-instagram"></i>
           </a>
 
           <a
             href="https://www.tiktok.com/@dunnis__signature?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-tiktok"></i>
           </a>
 
           <a
-            href="https://l.instagram.com/?u=https%3A%2F%2Frb.gy%2Fpb4aet%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadqgFo3uyzFsGWiirukPj3icSK9wFTTYaeE9-e5J0GDObbnhWRuKiL7qPJbUQ_aem_ZojjxyOJu-Jy20zS94xxww&e=AUAFp-RAkW1aPrZ2H492GgNAXQ41JO3bzgWW3_i6UU4SDfivZrVjZTmonypl5cOtT0-FrRawqRziDBcGwmK-PMvEtsjJjkUzX20k19YbDySbqLoimdwfSkr9XpfBMlf00pijlF8"
+            href="https://wa.link/m9ibde"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="fa-brands fa-whatsapp"></i>
           </a>

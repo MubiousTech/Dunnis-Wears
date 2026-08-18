@@ -31,7 +31,6 @@ button {
   font-family: inherit;
 }
 
-
 /* =========================================================
    NAVBAR
 ========================================================= */
@@ -41,10 +40,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+
   padding: 0 2rem;
+
   background: rgba(30, 24, 20, 0.18);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+
   z-index: 100;
 }
 
@@ -52,20 +54,47 @@ header {
   width: 100%;
   max-width: 1400px;
   height: 75px;
-  margin: auto;
+
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo a {
-  color: #f5f3ef;
-  font-family: "Playfair Display", serif;
-  font-size: 36px;
-  font-style: italic;
-  letter-spacing: 0.02em;
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
 }
+
+.logo a {
+  display: flex;
+  align-items: center;
+
+  line-height: 0;
+}
+
+.logo img {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
 
 .links {
   display: flex;
@@ -73,24 +102,49 @@ header {
   gap: 2rem;
 }
 
+.links li {
+  list-style: none;
+}
+
 .links a {
   color: #f5f3ef;
+
   font-size: 15px;
   font-weight: 500;
-  transition: 0.3s ease;
+
+  transition: color 0.3s ease;
 }
 
 .links a:hover {
   color: #d6b878;
 }
 
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
 .toggle_btn {
   display: none;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
   color: #fff;
+
   font-size: 24px;
+
   cursor: pointer;
+
+  padding: 8px;
+
+  transition: color 0.3s ease;
 }
 
+.toggle_btn:hover {
+  color: #d6b878;
+}
 
 /* =========================================================
    MOBILE DROPDOWN
@@ -100,6 +154,7 @@ header {
   display: none;
 
   position: absolute;
+
   top: 75px;
   right: 20px;
 
@@ -108,7 +163,9 @@ header {
   padding: 10px 0;
 
   background: rgba(30, 24, 20, 0.92);
+
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   border-radius: 10px;
 
@@ -122,19 +179,23 @@ header {
 }
 
 .dropdown_menu li {
+  list-style: none;
   padding: 12px 20px;
 }
 
 .dropdown_menu a {
   display: block;
+
   color: #fff;
+
   font-size: 15px;
+
+  transition: color 0.3s ease;
 }
 
 .dropdown_menu a:hover {
   color: #d6b878;
 }
-
 
 /* =========================================================
    HERO
@@ -147,7 +208,6 @@ header {
   min-height: 650px;
   overflow: hidden;
 }
-
 
 /* Slider container */
 
@@ -164,7 +224,6 @@ header {
 
   z-index: 1;
 }
-
 
 /* Slider */
 
@@ -197,7 +256,6 @@ header {
 
   z-index: 1;
 }
-
 
 /* Main slides */
 
@@ -233,7 +291,6 @@ header {
   z-index: 2;
 }
 
-
 /* Smaller preview slides */
 
 .slide .item:nth-child(3) {
@@ -253,7 +310,6 @@ header {
   opacity: 0;
 }
 
-
 /* Dark overlay on the active hero image */
 
 .slide .item:nth-child(1)::after,
@@ -267,7 +323,6 @@ header {
 
   z-index: 0;
 }
-
 
 /* Hero content */
 
@@ -292,7 +347,6 @@ header {
   display: block;
 }
 
-
 /* Hero title */
 
 .content .name {
@@ -313,7 +367,6 @@ header {
   animation: heroAnimate 1s ease-in-out forwards;
 }
 
-
 /* Hero description */
 
 .content .des {
@@ -331,7 +384,6 @@ header {
 
   animation: heroAnimate 1s ease-in-out 0.2s forwards;
 }
-
 
 /* Hero button */
 
@@ -360,7 +412,6 @@ header {
   border-color: #b89b5e;
 }
 
-
 /* Hero animation */
 
 @keyframes heroAnimate {
@@ -376,7 +427,6 @@ header {
     filter: blur(0);
   }
 }
-
 
 /* =========================================================
    SLIDER BUTTONS
@@ -421,7 +471,6 @@ header {
   border-color: #b89b5e;
 }
 
-
 /* =========================================================
    GENERAL SECTION LABEL
 ========================================================= */
@@ -441,7 +490,6 @@ header {
 
   text-transform: uppercase;
 }
-
 
 /* =========================================================
    DISCOVER + FEATURED PRODUCTS
@@ -481,7 +529,6 @@ header {
   font-size: 17px;
 }
 
-
 /* Cards */
 
 .signature-cards {
@@ -516,7 +563,6 @@ header {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.13);
 }
 
-
 /* Card image */
 
 .card-image {
@@ -541,7 +587,6 @@ header {
 .signature-card:hover .card-image img {
   transform: scale(1.05);
 }
-
 
 /* Card content */
 
@@ -573,7 +618,6 @@ header {
   margin-bottom: 20px;
 }
 
-
 /* Explore button */
 
 .explore-btn {
@@ -595,7 +639,6 @@ header {
   color: #fff;
 }
 
-
 /* Featured products needs 4 cards */
 
 .featured-products .signature-cards {
@@ -605,7 +648,6 @@ header {
 .featured-products .card-image {
   height: 350px;
 }
-
 
 /* =========================================================
    WHY CHOOSE US
@@ -661,7 +703,6 @@ header {
   line-height: 1.8;
 }
 
-
 /* Features grid */
 
 .features-container {
@@ -691,7 +732,6 @@ header {
 .feature:hover {
   transform: translateY(-5px);
 }
-
 
 /* Feature icon */
 
@@ -747,7 +787,6 @@ header {
 
   line-height: 1.8;
 }
-
 
 /* =========================================================
    COLLECTION BANNER
@@ -841,7 +880,6 @@ header {
   line-height: 1.7;
 }
 
-
 /* Banner buttons */
 
 .featured-buttons {
@@ -906,7 +944,6 @@ header {
   border-color: #d6b878;
 }
 
-
 /* =========================================================
    SHOP / COLLECTIONS
 ========================================================= */
@@ -944,7 +981,6 @@ header {
 
   font-size: 16px;
 }
-
 
 /* Filter buttons */
 
@@ -984,7 +1020,6 @@ header {
 
   color: #fff;
 }
-
 
 /* Gallery */
 
@@ -1040,37 +1075,6 @@ header {
   background: rgba(0, 0, 0, 0.18);
 }
 
-
-/* Gallery button */
-
-.gallery-action {
-  text-align: center;
-
-  margin-top: 45px;
-}
-
-.view-all-btn {
-  display: inline-block;
-
-  padding: 13px 28px;
-
-  border: 1px solid #b89b5e;
-
-  color: #a17c4e;
-
-  font-size: 13px;
-
-  letter-spacing: 1px;
-
-  transition: 0.3s ease;
-}
-
-.view-all-btn:hover {
-  background: #b89b5e;
-
-  color: #fff;
-}
-
 /* =========================================
    DISCOVER OUR STORY
 ========================================= */
@@ -1105,7 +1109,6 @@ header {
 .story-image:hover img {
   transform: scale(1.04);
 }
-
 
 /* CONTENT */
 
@@ -1157,7 +1160,6 @@ header {
   margin-bottom: 18px;
 }
 
-
 /* BUTTON */
 
 .story-button {
@@ -1191,13 +1193,11 @@ header {
   transform: translateY(-3px);
 }
 
-
 /* =========================================
    STORY RESPONSIVE
 ========================================= */
 
 @media (max-width: 900px) {
-
   .story-section {
     padding: 80px 6%;
     gap: 50px;
@@ -1210,12 +1210,9 @@ header {
   .story-content h2 {
     font-size: 42px;
   }
-
 }
 
-
 @media (max-width: 700px) {
-
   .story-section {
     flex-direction: column;
     padding: 70px 7%;
@@ -1234,12 +1231,9 @@ header {
   .story-content h2 {
     font-size: 38px;
   }
-
 }
 
-
 @media (max-width: 480px) {
-
   .story-section {
     padding: 60px 20px;
   }
@@ -1259,9 +1253,7 @@ header {
   .story-content p:not(.story-intro) {
     font-size: 15px;
   }
-
 }
-
 
 /* =========================================================
    TESTIMONIALS
@@ -1349,7 +1341,6 @@ header {
   font-weight: 500;
 }
 
-
 /* =========================================================
    CONTACT
 ========================================================= */
@@ -1419,7 +1410,6 @@ header {
 .contact-btn:hover {
   background: #a17c4e;
 }
-
 
 /* =========================================================
    FOOTER
@@ -1545,13 +1535,11 @@ footer {
   font-size: 13px;
 }
 
-
 /* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
-
   .links {
     gap: 1.2rem;
   }
@@ -1589,7 +1577,6 @@ footer {
   }
 }
 
-
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -1616,8 +1603,15 @@ footer {
     top: 65px;
   }
 
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
 
-  /* Hero */
+
+  /* =========================================
+     HERO
+  ========================================= */
 
   .hero-section {
     min-height: 600px;
@@ -1626,7 +1620,6 @@ footer {
 
   .item .content {
     left: 7%;
-
     width: 80%;
   }
 
@@ -1639,7 +1632,9 @@ footer {
   }
 
 
-  /* Signature cards */
+  /* =========================================
+     SIGNATURE CARDS
+  ========================================= */
 
   .signature-section {
     padding: 75px 5%;
@@ -1652,14 +1647,14 @@ footer {
 
   .signature-card {
     width: 100%;
-
     max-width: 500px;
-
     margin: auto;
   }
 
 
-  /* Features */
+  /* =========================================
+     FEATURES
+  ========================================= */
 
   .brand-features {
     padding: 75px 5%;
@@ -1671,9 +1666,7 @@ footer {
 
   .feature {
     border-left: none;
-
     border-bottom: 1px solid rgba(80, 60, 45, 0.15);
-
     padding: 35px 15px;
   }
 
@@ -1682,7 +1675,9 @@ footer {
   }
 
 
-  /* Banner */
+  /* =========================================
+     BANNER
+  ========================================= */
 
   .featured-collection {
     min-height: 600px;
@@ -1690,7 +1685,6 @@ footer {
 
   .featured-content {
     width: 85%;
-
     margin: auto;
   }
 
@@ -1703,7 +1697,9 @@ footer {
   }
 
 
-  /* Gallery */
+  /* =========================================
+     GALLERY
+  ========================================= */
 
   .shop-section {
     padding: 75px 5%;
@@ -1711,7 +1707,6 @@ footer {
 
   .shop-gallery {
     grid-template-columns: repeat(2, 1fr);
-
     gap: 12px;
   }
 
@@ -1725,36 +1720,37 @@ footer {
 
   .filter-btn {
     padding: 9px 13px;
-
     font-size: 12px;
   }
 
 
-  /* Testimonials */
+  /* =========================================
+     TESTIMONIALS
+  ========================================= */
 
   .testimonials-container {
     grid-template-columns: 1fr;
   }
 
 
-  /* Footer */
+  /* =========================================
+     FOOTER
+  ========================================= */
 
   .footer-content {
     grid-template-columns: 1fr;
-
     gap: 35px;
   }
 }
-
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 480px) {
-
-  .logo a {
-    font-size: 25px;
+  .logo img {
+    width: 48px;
+    height: 48px;
   }
 
   .dropdown_menu {
